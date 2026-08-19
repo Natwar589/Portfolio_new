@@ -1,17 +1,25 @@
 import Profile from "./components/Profile.jsx";
-import Hero from "../src/components/Hero.jsx";
+import Hero from "./components/Hero.jsx";
 import LeftBar from "./components/LeftBar.jsx";
 import React from "react";
 import "./App.css";
+
 function App() {
   return (
-    <div className="main h-[auto] w-[100vw] pt-[70px] ">
-      <div className="h-[100%] w-[100%] flex  justify-center gap-5 ">
+    <>
+      {/* Animated background orbs */}
+      <div className="bg-orbs">
+        <div className="orb orb-1" />
+        <div className="orb orb-2" />
+        <div className="orb orb-3" />
+      </div>
+
+      <div className="portfolio-layout">
         <Profile />
         <Hero />
         <LeftBar />
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import About from "./hero/About";
 import Resume from "./hero/Resume";
 import Project from "./hero/Project";
 import Contact from "./hero/Contact";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 const Hero = () => {
+  const location = useLocation();
+
   return (
-    <div className=" bg-white w-[50%] h-[auto] rounded-lg">
-      <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/project" element={<Project />} />
-      </Routes>
+    <div
+      className="glass-card flex-1 min-w-0 overflow-y-auto no-scrollbar"
+      style={{ minHeight: "calc(100vh - 40px)", maxHeight: "calc(100vh - 40px)" }}
+    >
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/project" element={<Project />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 };
