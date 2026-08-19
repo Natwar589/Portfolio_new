@@ -11,8 +11,10 @@ const Hero = () => {
 
   return (
     <div
-      className="glass-card flex-1 min-w-0 overflow-y-auto no-scrollbar"
-      style={{ minHeight: "calc(100vh - 40px)", maxHeight: "calc(100vh - 40px)" }}
+      className="glass-card flex-1 min-w-0 lg:overflow-y-auto no-scrollbar rounded-2xl"
+      style={{
+        minHeight: "auto",
+      }}
     >
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

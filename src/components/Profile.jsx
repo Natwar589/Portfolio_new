@@ -77,8 +77,8 @@ const Profile = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="glass-card w-[240px] flex-shrink-0 sticky top-[20px] self-start flex flex-col items-center p-6 gap-5"
-      style={{ maxHeight: "calc(100vh - 40px)", overflowY: "auto" }}
+      className="glass-card w-full lg:w-[240px] flex-shrink-0 static lg:sticky lg:top-[20px] self-stretch lg:self-start flex flex-col items-center p-4 sm:p-6 gap-4 sm:gap-5"
+      style={{ maxHeight: "none", overflowY: "visible" }}
     >
       {/* Profile Image */}
       <motion.div

@@ -99,7 +99,7 @@ const Resume = () => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="p-8"
+      className="p-4 sm:p-6 md:p-8"
     >
       {/* Header */}
       <div className="section-header">
@@ -236,7 +236,7 @@ const Resume = () => {
             Certifications
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {certifications.map((cert, i) => (
             <motion.div
               key={i}

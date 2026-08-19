@@ -118,7 +118,7 @@ const About = () => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="p-8"
+      className="p-4 sm:p-6 md:p-8"
     >
       {/* Section Header */}
       <div className="section-header">
@@ -133,7 +133,7 @@ const About = () => {
       <motion.div variants={stagger} initial="initial" animate="animate">
         <motion.p
           variants={fadeUp}
-          className="leading-relaxed text-[14px] mb-4"
+          className="leading-relaxed text-[13px] sm:text-[14px] mb-4"
           style={{ color: "var(--text-secondary)" }}
         >
           Full-stack developer with <span style={{ color: "#a78bfa", fontWeight: 600 }}>1+ year of MERN stack experience</span> and hands-on exposure to Python, Redis, and RabbitMQ. Skilled in designing and delivering{" "}
@@ -141,7 +141,7 @@ const About = () => {
         </motion.p>
         <motion.p
           variants={fadeUp}
-          className="leading-relaxed text-[14px]"
+          className="leading-relaxed text-[13px] sm:text-[14px]"
           style={{ color: "var(--text-secondary)" }}
         >
           Interested in building <span style={{ color: "#6366f1", fontWeight: 600 }}>AI automation workflows</span>, model integrations, and end-to-end automation pipelines. Currently working at{" "}
@@ -160,7 +160,7 @@ const About = () => {
         <h2 className="text-[16px] font-bold mb-4 font-['Space_Grotesk']" style={{ color: "var(--text-primary)" }}>
           What I Do
         </h2>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {whatIDo.map((item, i) => (
             <motion.div
               key={i}

@@ -95,7 +95,7 @@ const Project = () => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="p-8"
+      className="p-4 sm:p-6 md:p-8"
     >
       {/* Header */}
       <div className="section-header">
@@ -111,7 +111,7 @@ const Project = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="flex flex-wrap gap-2 mb-6"
+        className="flex flex-wrap gap-1.5 sm:gap-2 mb-6"
       >
         {categories.map((cat) => (
           <button
@@ -133,7 +133,7 @@ const Project = () => {
       </motion.div>
 
       {/* Project Grid */}
-      <motion.div layout className="grid grid-cols-2 gap-4">
+      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <AnimatePresence>
           {filtered.map((project, i) => (
             <motion.div
@@ -144,7 +144,7 @@ const Project = () => {
               exit={{ opacity: 0, scale: 0.85 }}
               transition={{ duration: 0.3, delay: i * 0.08 }}
               whileHover={{ y: -6 }}
-              className={`relative rounded-xl overflow-hidden transition-all duration-300 ${project.featured ? "col-span-2" : ""}`}
+              className={`relative rounded-xl overflow-hidden transition-all duration-300 ${project.featured ? "col-span-1 md:col-span-2" : ""}`}
               style={{
                 background: `radial-gradient(ellipse at top left, ${project.accent}08, transparent), rgba(255,255,255,0.03)`,
                 border: `1px solid ${project.accent}25`,

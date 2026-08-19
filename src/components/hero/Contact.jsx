@@ -59,7 +59,7 @@ const Contact = () => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="p-8"
+      className="p-4 sm:p-6 md:p-8"
     >
       {/* Header */}
       <div className="section-header">
@@ -72,7 +72,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="text-[13px] mb-6 leading-relaxed"
+        className="text-[12px] sm:text-[13px] mb-6 leading-relaxed"
         style={{ color: "var(--text-secondary)" }}
       >
         Open to exciting opportunities, collaborations, and conversations. Drop a message — I'll get back to you soon! 🚀
@@ -83,7 +83,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15 }}
-        className="grid grid-cols-2 gap-3 mb-8"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8"
       >
         {contactLinks.map((link, i) => (
           <motion.a
@@ -132,7 +132,7 @@ const Contact = () => {
         </h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <input
               type="text"
               name="name"
